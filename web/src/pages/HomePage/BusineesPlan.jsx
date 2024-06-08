@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import planImage from "../../assets/images/plan.png";
-
 const BusinessPlanSection = () => {
   return (
-    <section className="bg-white">
-      <div className="flex flex-wrap items-center">
-        <div className="w-full lg:w-1/2 mb-12 lg:mb-0 bg-[#f4f4f4] py-20 lg:py-40 px-6 lg:px-10 flex justify-center lg:justify-end">
+    <section className=" bg-white">
+      <div className=" flex flex-wrap items-center">
+        <div className="w-full lg:w-1/2 mb-12 lg:mb-0 bg-[#f4f4f4] py-40 px-10 flex justify-end">
           <div className="w-full lg:w-2/4">
             <img
               className="w-full h-auto rounded-lg shadow-lg"
@@ -32,7 +31,7 @@ const BusinessPlanSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:pl-12 px-6 lg:px-0">
+        <div className="w-full lg:w-1/3 lg:pl-12">
           <h2 className="text-sm font-semibold tracking-wide text-green-500 uppercase">
             Welcome The WebCraft Solutions Limited
           </h2>

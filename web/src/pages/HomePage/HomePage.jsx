@@ -3,6 +3,7 @@ import MainSection from "./MainSection";
 import BusinessPlanSection from "./BusineesPlan";
 import ClientsSection from "./ClientSection";
 import Services from "./Services";
+import BusinessGrowthSection from "./BusinessGrowth";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <BusinessPlanSection />
       <ClientsSection />
       <Services />
+      <BusinessGrowthSection />
     </div>
   );
 }
