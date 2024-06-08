@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
@@ -14,49 +15,49 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline gap-4 space-x-4">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/about"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   About Us
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/services"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Services
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/blog"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Blog
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/contact"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="ml-4 flex items-center md:ml-6">
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="text-white bg-indigo-500 hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Get Consulting
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -114,42 +115,42 @@ const Navbar = () => {
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Home
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             About Us
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/services"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Services
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/blog"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Blog
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/contact"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Contact Us
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/consulting"
             className="text-white bg-indigo-500 hover:bg-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
           >
             Get Consulting
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

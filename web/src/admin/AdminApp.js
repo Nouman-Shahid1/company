@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Admin from "./admin";
-import Login from "./Login";
+import Admin from "./pages/admin";
+import Login from "./pages/Login";
 import PrivateRoute from "../components/PrivateRoute";
 
 function AdminApp() {
