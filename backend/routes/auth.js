@@ -6,6 +6,23 @@ const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret_key";
 
+// Middleware to verify JWT token
+const authenticateToken = (req, res, next) => {
+  const token = req.header("Authorization");
+  if (!token)
+    return res
+      .status(401)
+      .json({ message: "Access denied, no token provided." });
+
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (ex) {
+    res.status(400).json({ message: "Invalid token." });
+  }
+};
+
 // Register route
 router.post("/register", async (req, res) => {
   const { username, password } = req.body;
@@ -47,6 +64,16 @@ router.post("/login", async (req, res) => {
     });
 
     res.json({ token });
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// Get current user route
+router.get("/me", authenticateToken, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.userId).select("-password");
+    res.json(user);
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }

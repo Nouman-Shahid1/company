@@ -5,11 +5,11 @@ import mainImage from "../../assets/images/main.png";
 const MainSection = () => {
   return (
     <section
-      className="relative flex items-center justify-between  text-white h-screen"
+      className="flex flex-col lg:flex-row items-center justify-between text-white h-screen"
       style={{ backgroundImage: `url(${mainImage})` }}
     >
       <div className="w-full lg:w-1/2 h-full flex items-center justify-center p-8 lg:p-24 bg-black bg-opacity-90">
-        <div>
+        <div className="text-center lg:text-left">
           <h2 className="text-sm font-semibold tracking-wide uppercase">
             Welcome to Whitecollar Solution
           </h2>
@@ -21,10 +21,10 @@ const MainSection = () => {
             Collaboratively administrate empowered markets plug and play
             networks dynamically procrastinate.
           </p>
-          <div className="mt-8 flex">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start">
             <Link
               to="/consulting"
-              className="inline-flex items-center justify-center px-6 py-3 mr-4 text-base font-medium text-white bg-green-500 hover:bg-green-600 rounded-md"
+              className="inline-flex items-center justify-center px-6 py-3 mb-4 sm:mb-0 sm:mr-4 text-base font-medium text-white bg-green-500 hover:bg-green-600 rounded-md"
             >
               Get Consulting
             </Link>

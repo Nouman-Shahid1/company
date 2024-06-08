@@ -1,32 +1,82 @@
 const express = require("express");
-const Data = require("../models/Data");
-
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const User = require("../models/User");
 const router = express.Router();
 
-router.post("/", (req, res) => {
-  const newData = new Data(req.body);
-  newData
-    .save()
-    .then((data) => res.json(data))
-    .catch((err) => res.status(400).json("Error: " + err));
+const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret_key";
+
+// Middleware to verify JWT token
+const authenticateToken = (req, res, next) => {
+  const token = req.header("Authorization");
+  if (!token)
+    return res
+      .status(401)
+      .json({ message: "Access denied, no token provided." });
+
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (ex) {
+    res.status(400).json({ message: "Invalid token." });
+  }
+};
+
+// Register route
+router.post("/register", async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const existingUser = await User.findOne({ username });
+    if (existingUser) {
+      return res.status(400).json({ message: "User already exists" });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = new User({ username, password: hashedPassword });
+    await newUser.save();
+
+    res.status(201).json({ message: "User registered successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
 });
 
-router.get("/", (req, res) => {
-  Data.find()
-    .then((datas) => res.json(datas))
-    .catch((err) => res.status(400).json("Error: " + err));
+// Login route
+router.post("/login", async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.status(400).json({ message: "Invalid credentials" });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid credentials" });
+    }
+
+    const token = jwt.sign({ userId: user._id }, JWT_SECRET, {
+      expiresIn: "1h",
+    });
+
+    res.json({ token });
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
 });
 
-router.patch("/:id", (req, res) => {
-  Data.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    .then((data) => res.json(data))
-    .catch((err) => res.status(400).json("Error: " + err));
-});
-
-router.delete("/:id", (req, res) => {
-  Data.findByIdAndDelete(req.params.id)
-    .then(() => res.json({ message: "Deleted Successfully" }))
-    .catch((err) => res.status(400).json("Error: " + err));
+// Get current user route
+router.get("/me", authenticateToken, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.userId).select("-password");
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
 });
 
 module.exports = router;
