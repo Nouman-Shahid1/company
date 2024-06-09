@@ -5,7 +5,7 @@ import ClientsSection from "./ClientSection";
 import Services from "./Services";
 import BusinessGrowthSection from "./BusinessGrowth";
 import ProjectsSection from "./ProjectSection";
-
+import Testimonial from "./Testimonial";
 function HomePage() {
   return (
     <div>
@@ -15,6 +15,7 @@ function HomePage() {
       <Services />
       <BusinessGrowthSection />
       <ProjectsSection />
+      <Testimonial/>
     </div>
   );
 }
