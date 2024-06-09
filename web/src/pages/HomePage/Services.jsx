@@ -29,7 +29,7 @@ import ServiceCard from "./components/ServiceCard"; // Import the ServiceCard co
 function Services() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl w-full space-y-8">
+      <div className="max-w-7xl w-full space-y-8">
         <div className="text-center">
           <p className="text-green-500 font-medium">We Are Expertise In</p>
           <h2 className="mt-2 text-3xl leading-9 font-extrabold text-gray-900">

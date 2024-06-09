@@ -4,6 +4,7 @@ import BusinessPlanSection from "./BusineesPlan";
 import ClientsSection from "./ClientSection";
 import Services from "./Services";
 import BusinessGrowthSection from "./BusinessGrowth";
+import ProjectsSection from "./ProjectSection";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <ClientsSection />
       <Services />
       <BusinessGrowthSection />
+      <ProjectsSection />
     </div>
   );
 }
