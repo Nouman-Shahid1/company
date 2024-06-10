@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Admin from "./admin/pages/admin";
@@ -15,7 +20,7 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        <Navbar />
+        <ConditionalNavbarAndFooter />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -34,10 +39,21 @@ function App() {
             <Route path="/admin/login" element={<Login />} />
           </Routes>
         </main>
-        <Footer />
+        <ConditionalNavbarAndFooter isFooter />
       </div>
     </Router>
   );
+}
+
+function ConditionalNavbarAndFooter({ isFooter }) {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
+  if (isFooter) {
+    return !isAdminRoute && <Footer />;
+  }
+
+  return !isAdminRoute && <Navbar />;
 }
 
 export default App;

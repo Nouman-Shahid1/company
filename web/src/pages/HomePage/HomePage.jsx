@@ -6,6 +6,10 @@ import Services from "./Services";
 import BusinessGrowthSection from "./BusinessGrowth";
 import ProjectsSection from "./ProjectSection";
 import Testimonial from "./Testimonial";
+import Apponitment from "./AppointmentSection";
+import TeamSection from "./Team";
+import BlogSection from "./BlogSection";
+import NewsletterSection from "./NewsLetters";
 function HomePage() {
   return (
     <div>
@@ -14,8 +18,12 @@ function HomePage() {
       <ClientsSection />
       <Services />
       <BusinessGrowthSection />
-      <ProjectsSection />
-      <Testimonial/>
+      {/* <ProjectsSection /> */}
+      <Testimonial />
+      <Apponitment />
+      <TeamSection />
+      <BlogSection />
+      <NewsletterSection />
     </div>
   );
 }

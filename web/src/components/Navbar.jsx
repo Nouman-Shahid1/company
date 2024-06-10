@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black">
+    <nav className="bg-black fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
@@ -18,46 +18,71 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline gap-4 space-x-4">
-                <Link
+                <NavLink
+                  exact
                   to="/"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  }
                 >
                   Home
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/about"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  }
                 >
                   About Us
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/services"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  }
                 >
                   Services
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/blog"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  }
                 >
                   Blog
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/contact"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  }
                 >
                   Contact Us
-                </Link>
+                </NavLink>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="ml-4 flex items-center md:ml-6">
-                <Link
-                  to="/contact"
-                  className="text-white bg-indigo-500 hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                <NavLink
+                  to="/consulting"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-white bg-indigo-500 hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                  }
                 >
                   Get Consulting
-                </Link>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -115,42 +140,67 @@ const Navbar = () => {
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link
+          <NavLink
+            exact
             to="/"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/about"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            }
           >
             About Us
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/services"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            }
           >
             Services
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/blog"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            }
           >
             Blog
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/contact"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            }
           >
             Contact Us
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/consulting"
-            className="text-white bg-indigo-500 hover:bg-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white bg-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+                : "text-white bg-indigo-500 hover:bg-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
+            }
           >
             Get Consulting
-          </Link>
+          </NavLink>
         </div>
       </div>
     </nav>
