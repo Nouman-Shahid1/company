@@ -18,7 +18,7 @@ function HomePage() {
       <ClientsSection />
       <Services />
       <BusinessGrowthSection />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
       <Testimonial />
       <Apponitment />
       <TeamSection />

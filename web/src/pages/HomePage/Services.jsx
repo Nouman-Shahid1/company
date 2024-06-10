@@ -1,5 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
   faDesktop,
@@ -20,7 +19,6 @@ import {
   faChartBar,
   faNetworkWired,
   faClipboardCheck,
-  faSyncAlt,
   faFileSignature,
 } from "@fortawesome/free-solid-svg-icons";
 import { faWordpress } from "@fortawesome/free-brands-svg-icons"; // Import the WordPress icon from the brands package

@@ -36,7 +36,11 @@ const Dashboard = () => {
         <div className="m-4">
           <ul className="mb-4 flex flex-col gap-1">
             <li>
-              <a aria-current="page" className="active" href="#">
+              <a
+                aria-current="page"
+                className="active"
+                href="https://twitter.com"
+              >
                 <button
                   className="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
                   type="button"
@@ -58,7 +62,7 @@ const Dashboard = () => {
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="" href="https://twitter.com">
                 <button
                   className="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                   type="button"
@@ -83,7 +87,7 @@ const Dashboard = () => {
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="" href="https://twitter.com">
                 <button
                   className="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                   type="button"
@@ -108,7 +112,7 @@ const Dashboard = () => {
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="" href="https://twitter.com">
                 <button
                   className="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                   type="button"
@@ -140,7 +144,7 @@ const Dashboard = () => {
               </p>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="" href="https://twitter.com">
                 <button
                   className="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                   type="button"
@@ -165,7 +169,7 @@ const Dashboard = () => {
               </a>
             </li>
             <li>
-              <a className="" href="#">
+              <a className="" href="https://twitter.com">
                 <button
                   className="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                   type="button"
@@ -195,7 +199,7 @@ const Dashboard = () => {
               <nav aria-label="breadcrumb" className="w-max">
                 <ol className="flex flex-wrap items-center w-full bg-opacity-60 rounded-md bg-transparent p-0 transition-all">
                   <li className="flex items-center text-blue-gray-900 antialiased font-sans text-sm font-normal leading-normal cursor-pointer transition-colors duration-300 hover:text-light-blue-500">
-                    <a href="#">
+                    <a href="https://twitter.com">
                       <p className="block antialiased font-sans text-sm leading-normal text-blue-900 font-normal opacity-50 transition-all hover:text-blue-500 hover:opacity-100">
                         dashboard
                       </p>
@@ -248,7 +252,7 @@ const Dashboard = () => {
                   </svg>
                 </span>
               </button>
-              <a href="#">
+              <a href="https://twitter.com">
                 <button
                   className="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-gray-500 hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 hidden items-center gap-1 px-4 xl:flex"
                   type="button"
@@ -687,8 +691,7 @@ const Dashboard = () => {
                 </svg>{" "}
                 by{" "}
                 <a
-                  href="https://www.creative-tim.com"
-                  target="_blank"
+                  href="https://twitter.com"
                   className="transition-colors hover:text-blue-500"
                 >
                   Creative Tim
@@ -698,8 +701,7 @@ const Dashboard = () => {
               <ul className="flex items-center gap-4">
                 <li>
                   <a
-                    href="https://www.creative-tim.com"
-                    target="_blank"
+                    href="https://twitter.com"
                     className="block antialiased font-sans text-sm leading-normal py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
                   >
                     Creative Tim
@@ -707,8 +709,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.creative-tim.com/presentation"
-                    target="_blank"
+                    href="https://twitter.com"
                     className="block antialiased font-sans text-sm leading-normal py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
                   >
                     About Us
@@ -716,8 +717,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.creative-tim.com/blog"
-                    target="_blank"
+                    href="https://twitter.com"
                     className="block antialiased font-sans text-sm leading-normal py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
                   >
                     Blog
@@ -725,8 +725,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.creative-tim.com/license"
-                    target="_blank"
+                    href="https://twitter.com"
                     className="block antialiased font-sans text-sm leading-normal py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
                   >
                     License

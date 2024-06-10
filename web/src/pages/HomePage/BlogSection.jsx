@@ -58,7 +58,7 @@ const BlogSection = () => {
                 in our field.
               </p>
               <a
-                href="javascript:;"
+                href="https://twitter.com"
                 className="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100"
               >
                 View All
@@ -125,7 +125,7 @@ const BlogSection = () => {
                   optimize your...
                 </p>
                 <a
-                  href="javascript:;"
+                  href="https://twitter.com"
                   className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 font-semibold"
                 >
                   Read more
@@ -163,7 +163,7 @@ const BlogSection = () => {
                   to financial...
                 </p>
                 <a
-                  href="javascript:;"
+                  href="https://twitter.com"
                   className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 font-semibold"
                 >
                   Read more
@@ -201,7 +201,7 @@ const BlogSection = () => {
                   while working from home...
                 </p>
                 <a
-                  href="javascript:;"
+                  href="https://twitter.com"
                   className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 font-semibold"
                 >
                   Read more
@@ -239,7 +239,7 @@ const BlogSection = () => {
                   and make informed decisions...
                 </p>
                 <a
-                  href="javascript:;"
+                  href="https://twitter.com"
                   className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 font-semibold"
                 >
                   Read more
