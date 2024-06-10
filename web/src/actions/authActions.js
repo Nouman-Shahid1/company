@@ -7,11 +7,9 @@ export const login = (username, password) => async (dispatch) => {
       username,
       password,
     });
-    const token = response.data.token;
-    localStorage.setItem("token", token);
     dispatch({
       type: LOGIN_SUCCESS,
-      payload: token,
+      payload: response.data,
     });
   } catch (error) {
     dispatch({
@@ -20,7 +18,21 @@ export const login = (username, password) => async (dispatch) => {
   }
 };
 
-export const logout = () => (dispatch) => {
-  localStorage.removeItem("token");
-  dispatch({ type: LOGOUT });
+export const logout = () => async (dispatch) => {
+  try {
+    const token = localStorage.getItem("token");
+    await axios.post(
+      "http://localhost:5000/api/auth/logout",
+      {},
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
+    localStorage.removeItem("token");
+    dispatch({
+      type: LOGOUT,
+    });
+  } catch (error) {
+    console.error("Error logging out:", error);
+  }
 };
