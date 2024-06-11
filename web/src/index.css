@@ -18,8 +18,8 @@ code {
 .marquee {
   overflow: hidden;
   position: relative;
-  white-space: nowrap;
-  box-sizing: border-box;
+  width: 100%;
+  display: flex;
 }
 
 .marquee-content {
@@ -28,14 +28,14 @@ code {
 }
 
 .marquee-content img {
-  margin-right: 2rem;
+  margin-right: 20px; /* Adjust the spacing between logos as needed */
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }

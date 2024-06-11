@@ -44,15 +44,15 @@ const BlogSection = () => {
   };
 
   return (
-    <section className="py-24">
+    <section className="py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
-          <div className="w-full flex justify-between flex-col lg:w-2/5">
-            <div className="block lg:text-left text-center">
+        <div className="flex flex-wrap lg:flex-nowrap lg:justify-between gap-8">
+          <div className="w-full flex flex-col lg:w-2/5">
+            <div className="text-center lg:text-left">
               <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">
                 Our latest <span className="text-indigo-600">blogs</span>
               </h2>
-              <p className="text-gray-500 mb-10 max-lg:max-w-xl max-lg:mx-auto">
+              <p className="text-gray-500 mb-10 max-w-lg mx-auto lg:mx-0">
                 Welcome to our blog section, where knowledge meets inspiration.
                 Explore insightful articles, expert tips, and the latest trends
                 in our field.
@@ -65,7 +65,7 @@ const BlogSection = () => {
               </a>
             </div>
             {/* Slider controls */}
-            <div className="flex items-center lg:justify-start justify-center lg:mt-0 mt-8 gap-8 mb-4">
+            <div className="flex items-center lg:justify-start justify-center lg:mt-20 mt-8 gap-8 mb-4">
               <button
                 onClick={() => sliderRef.current.slickPrev()}
                 className="group flex justify-center items-center border border-solid border-indigo-600 w-11 h-11 transition-all duration-500 rounded-full hover:bg-indigo-600"
@@ -108,8 +108,8 @@ const BlogSection = () => {
           </div>
           <div className="w-full lg:w-3/5">
             <Slider ref={sliderRef} {...settings}>
-              <div className="w-full max-lg:max-w-xl lg:w-1/2 group px-2">
-                <div className="flex items-center mb-9">
+              <div className="w-full px-2">
+                <div className="mb-9">
                   <img
                     src="https://pagedone.io/asset/uploads/1696244059.png"
                     alt="blogs tailwind section"
@@ -119,7 +119,7 @@ const BlogSection = () => {
                 <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">
                   Clever ways to invest in product to organize your portfolio
                 </h3>
-                <p className="text-gray-500 leading-6 transition-all duration-500 mb-8">
+                <p className="text-gray-500 leading-6 mb-8">
                   Discover smart investment strategies to streamline and
                   organize your portfolio. Explore innovative approaches to
                   optimize your...
@@ -146,8 +146,8 @@ const BlogSection = () => {
                   </svg>
                 </a>
               </div>
-              <div className="w-full max-lg:max-w-xl lg:w-1/2 group px-2">
-                <div className="flex items-center mb-9">
+              <div className="w-full px-2">
+                <div className="mb-9">
                   <img
                     src="https://pagedone.io/asset/uploads/1696244074.png"
                     alt="blogs tailwind section"
@@ -157,7 +157,7 @@ const BlogSection = () => {
                 <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">
                   How to grow your profit through systematic investment with us
                 </h3>
-                <p className="text-gray-500 leading-6 transition-all duration-500 mb-8">
+                <p className="text-gray-500 leading-6 mb-8">
                   Unlock the power of systematic investment with us and watch
                   your profits soar. Our expert team will guide you on the path
                   to financial...
@@ -184,8 +184,8 @@ const BlogSection = () => {
                   </svg>
                 </a>
               </div>
-              <div className="w-full max-lg:max-w-xl lg:w-1/2 group px-2">
-                <div className="flex items-center mb-9">
+              <div className="w-full px-2">
+                <div className="mb-9">
                   <img
                     src="https://pagedone.io/asset/uploads/1696244059.png"
                     alt="blogs tailwind section"
@@ -195,7 +195,7 @@ const BlogSection = () => {
                 <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">
                   Tips for effective remote working
                 </h3>
-                <p className="text-gray-500 leading-6 transition-all duration-500 mb-8">
+                <p className="text-gray-500 leading-6 mb-8">
                   Remote working has become the new norm. Discover how you can
                   maximize productivity and maintain a healthy work-life balance
                   while working from home...
@@ -222,8 +222,8 @@ const BlogSection = () => {
                   </svg>
                 </a>
               </div>
-              <div className="w-full max-lg:max-w-xl lg:w-1/2 group px-2">
-                <div className="flex items-center mb-9">
+              <div className="w-full px-2">
+                <div className="mb-9">
                   <img
                     src="https://pagedone.io/asset/uploads/1696244074.png"
                     alt="blogs tailwind section"
@@ -233,7 +233,7 @@ const BlogSection = () => {
                 <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">
                   Best practices for financial planning
                 </h3>
-                <p className="text-gray-500 leading-6 transition-all duration-500 mb-8">
+                <p className="text-gray-500 leading-6 mb-8">
                   Financial planning is essential for a secure future. Learn
                   about the best practices to manage your finances effectively
                   and make informed decisions...

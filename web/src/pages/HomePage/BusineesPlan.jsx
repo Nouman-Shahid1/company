@@ -4,10 +4,10 @@ import planImage from "../../assets/images/plan.png";
 
 const BusinessPlanSection = () => {
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center">
-        <div className="w-full lg:w-1/2 mb-12 lg:mb-0 bg-[#f4f4f4] py-16 px-10 flex justify-center lg:justify-end">
-          <div className="w-full lg:w-2/3">
+    <section className="bg-white">
+      <div className="flex flex-wrap items-center px-4 sm:px-6 lg:px-8">
+        <div className="w-full lg:w-1/2 mb-12 lg:mb-0 bg-[#f4f4f4] py-20 sm:py-40 px-6 sm:px-10 flex justify-center lg:justify-end">
+          <div className="w-full lg:w-2/4">
             <img
               className="w-full h-auto rounded-lg shadow-lg"
               src={planImage}
@@ -18,8 +18,8 @@ const BusinessPlanSection = () => {
                 We're Ready To Grow Your Business With Us
               </h2>
               <p className="mt-4 text-gray-600">
-                Leverage agile frameworks to provide a robust synopsis for
-                high-level overviews. Iterative approaches to corporate strategy
+                Leverage agile frameworks to provide a robust synopsis for high
+                level overviews. Iterative approaches to corporate strategy
                 foster collaborative thinking to further the overall value
                 proposition.
               </p>
@@ -32,24 +32,22 @@ const BusinessPlanSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:pl-12">
+        <div className="w-full lg:w-1/3 lg:pl-12 px-6 sm:px-10">
           <h2 className="text-sm font-semibold tracking-wide text-green-500 uppercase">
-            Welcome to The WebCraft Solutions Limited
+            Welcome The WebCraft Solutions Limited
           </h2>
           <h1 className="mt-2 text-3xl font-extrabold leading-tight text-gray-900">
             We Care About Your Business Plan.
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Leverage agile frameworks to provide a robust synopsis for
-            high-level overviews. Iterative approaches to corporate strategy
-            foster collaborative thinking to further the overall value
-            proposition.
+            Leverage agile frameworks to provide a robust synopsis for high
+            level overviews. Iterative approaches to corporate strategy foster
+            collaborative thinking to further the overall value proposition.
           </p>
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            Leverage agile frameworks to provide a robust synopsis for
-            high-level overviews. Iterative approaches to corporate strategy
-            foster collaborative thinking to further the overall value
-            proposition.
+            Leverage agile frameworks to provide a robust synopsis for high
+            level overviews. Iterative approaches to corporate strategy foster
+            collaborative thinking to further the overall value proposition.
           </p>
           <div className="mt-8 space-y-4">
             <div className="flex items-start">
@@ -95,8 +93,8 @@ const BusinessPlanSection = () => {
               </div>
             </div>
           </div>
-          <div className="mt-8 space-y-4">
-            <div className="flex items-start">
+          <div className="mt-8 flex flex-wrap space-x-4">
+            <div className="flex items-center w-full sm:w-auto mb-4 sm:mb-0">
               <div className="flex-shrink-0 w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center">
                 <svg
                   className="w-4 h-4"
@@ -118,7 +116,7 @@ const BusinessPlanSection = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-start">
+            <div className="flex items-center w-full sm:w-auto mb-4 sm:mb-0">
               <div className="flex-shrink-0 w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center">
                 <svg
                   className="w-4 h-4"
