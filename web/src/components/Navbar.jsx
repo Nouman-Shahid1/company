@@ -8,83 +8,79 @@ const Navbar = () => {
   return (
     <nav className="bg-black fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img className="h-auto w-32" src={logo} alt="Logo" />
+              <img className="h-8 w-auto" src={logo} alt="Logo" />
             </div>
           </div>
 
-          <div className="flex items-center">
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline gap-4 space-x-4">
-                <NavLink
-                  exact
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  }
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  }
-                >
-                  About Us
-                </NavLink>
-                <NavLink
-                  to="/services"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  }
-                >
-                  Services
-                </NavLink>
-                <NavLink
-                  to="/blog"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  }
-                >
-                  Blog
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  }
-                >
-                  Contact Us
-                </NavLink>
-              </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <NavLink
+                exact
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                }
+              >
+                About Us
+              </NavLink>
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                }
+              >
+                Services
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                }
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                }
+              >
+                Contact Us
+              </NavLink>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-4 flex items-center md:ml-6">
-                <NavLink
-                  to="/consulting"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white bg-indigo-500 hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
-                  }
-                >
-                  Get Consulting
-                </NavLink>
-              </div>
-            </div>
+          </div>
+          <div className="hidden md:block">
+            <NavLink
+              to="/consulting"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+                  : "text-white bg-indigo-500 hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+              }
+            >
+              Get Consulting
+            </NavLink>
           </div>
 
           <div className="md:hidden">

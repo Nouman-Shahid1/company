@@ -4,8 +4,8 @@ import { FaCheckCircle } from "react-icons/fa";
 const BusinessSection = () => {
   return (
     <div className="bg-[#7C6BFC] text-white py-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="w-3/4 ml-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8">
+        <div className="w-full md:w-3/4 md:ml-12">
           <h2 className="text-lg font-bold text-green-400 mb-2">How We Work</h2>
           <h3 className="text-4xl font-bold mb-4">
             To Get Your Business To The Next Level
@@ -15,15 +15,15 @@ const BusinessSection = () => {
             overviews. Iterative approaches to corporate strategy foster
             collaborative thinking to further the overall.
           </p>
-          <div className="bg-[#3AD89F] p-6 rounded-lg mb-8 flex items-center">
-            <div className="flex items-center justify-center">
+          <div className="bg-[#3AD89F] p-6 rounded-lg mb-8 flex flex-col md:flex-row items-center">
+            <div className="flex items-center justify-center mb-4 md:mb-0">
               <div className="flex flex-col items-center justify-center w-32 h-32 text-3xl font-bold text-white p-4 rounded-full border-4 border-blue-500">
                 <span className="text-4xl">562+</span>
                 <p className="text-sm mt-1">Projects</p>
               </div>
             </div>
 
-            <div className="ml-4 text-white">
+            <div className="ml-0 md:ml-4 text-white text-center md:text-left">
               <p className="text-2xl">
                 We have <span className="font-bold">50+</span> years of
                 experience. We offer{" "}
@@ -73,7 +73,7 @@ const BusinessSection = () => {
             Get Free Business Appointment
           </h3>
           <div className="bg-white text-black rounded-lg shadow-lg">
-            <div className="flex items-center justify-center p-12">
+            <div className="flex items-center justify-center p-8 md:p-12">
               <div className="mx-auto w-full max-w-[550px] bg-white">
                 <form>
                   <div className="mb-5">
