@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
         <link rel="icon" href={Favicon} />
       </Head>
       {/* <Authentication router={router}> */}
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md sm:ml-[340px]">
           {children}
         </div>
