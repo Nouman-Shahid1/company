@@ -144,7 +144,7 @@ const Navbar = () => {
         </div>
 
         {nav && (
-          <div className="fixed left-0 top-0 w-[315px] h-full bg-white flex flex-col justify-start items-start pt-2 pl-6 z-50">
+          <div className="fixed left-0 top-0 w-[320px] h-full bg-white flex flex-col justify-start items-start pt-2 pl-6 z-50">
             <div className="flex justify-between items-center w-full mb-6">
               <Link href="/">
                 <div>
