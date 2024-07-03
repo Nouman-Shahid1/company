@@ -1,32 +1,32 @@
-// server.js
 const express = require("express");
-const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const cors = require("cors");
-const authRoutes = require("./routes/auth");
+const connectDB = require("./config/db");
+const errorMiddleware = require("./middlewares/errorMiddleware");
 
+// Load environment variables
 dotenv.config();
 
+// Connect to the database
+connectDB();
+
 const app = express();
-const port = process.env.PORT || 3000;
 
+// Middleware
 app.use(express.json());
-app.use(cors());
 
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("Connected to MongoDB Atlas");
-  })
-  .catch((err) => {
-    console.error("Failed to connect to MongoDB Atlas", err);
-  });
+// Routes
+app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/jobs", require("./routes/jobRoutes"));
+app.use("/api/projects", require("./routes/projectRoutes"));
+app.use("/api/blogs", require("./routes/blogRoutes"));
+app.use("/api/courses", require("./routes/courseRoutes"));
 
-app.use("/api/auth", authRoutes);
+// Error Middleware
+app.use(errorMiddleware);
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

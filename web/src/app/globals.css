@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.checkbox {
+  display: flex;
+  width: 21px;
+  height: 21px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background: #f9f9fd;
+  border: 1px solid #8c8e90;
+  border-radius: 5px;
+  margin: 0;
+  outline: none;
+  transition: 0.5s ease;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  border: 1px solid #00ac4f;
+  background-color: #f4f3ff;
+}
+
+.checkbox:checked:before {
+  content: "\2713";
+  margin: auto;
+  color: #00ac4f;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.checkbox:not(:checked):before {
+  content: "";
+  margin: auto;
+  width: 12px;
+  height: 2px;
+  background-color: #8c8e90;
+}
+
+/* Default styles */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  z-index: 100px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #fafbff;
+  color: #fff;
+  text-align: left;
+  padding: 21px 20px 30px 20px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 4px;
+  z-index: 40;
+  width: 356px;
+  left: 20px;
+}
+@media (max-width: 768px) {
+  .tooltip {
+    width: 200px;
+  }
+}
+.specific-tooltip-wrapper .tooltip {
+  width: 200px;
+}
+.tooltip-left {
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}
+.tooltip-right {
+  top: 200px;
+  left: -330px;
+  transform: translateY(-50%);
+}
+#ContactToolTip {
+  left: -200px;
+}
+/* .category {
+  border: none;
+  background-color: #00ac4f;
+} */
+@layer components {
+  .category a.active {
+    @apply ring ring-yellow-50 outline-none bg-green-500;
+    /* border-radius: 50%; */
+  }
+  .focusinput {
+    @apply focus:ring-2 focus:ring-[#078C89];
+  }
+}
+.customModal {
+  background: #00ac4f;
+}
+#separator-sidebar {
+  scrollbar-color: #078c89 transparent;
+  scrollbar-width: 15px !important;
+  scrollbar-width: thin;
+  overflow-y: auto;
+}
+
+#separator-sidebar::-webkit-scrollbar {
+  width: 12px;
+}
+
+#separator-sidebar::-webkit-scrollbar-thumb {
+  background-color: #078c89;
+}
+
+.carousel-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.carousel-image {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border: 1px solid #d9d9d9;
+  object-fit: cover;
+}
+
+.carousel .thumbs-wrapper .thumb.selected {
+  border: 3px solid #078c89;
+}
+
+.carousel .slide img {
+  max-height: 400px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.carousel .thumbs-wrapper .thumb {
+  height: 80px;
+}
+
+.carousel .slide {
+  height: auto;
+}
+
+.carousel .thumbs-wrapper .thumb:hover {
+  border: 3px solid #078c89;
+}
+
+.carousel .slide.selected {
+  object-fit: contain;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .carousel .slide img {
+    max-height: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel .slide img {
+    max-height: 300px;
+  }
+}
+.custom-list {
+  list-style-position: outside;
+}
+
+.custom-list li::marker {
+  color: #14b7b1;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: rgb(14, 14, 102);
+  color: white;
+  border: 1px solid rgb(14, 14, 102);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
