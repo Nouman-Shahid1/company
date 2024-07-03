@@ -117,7 +117,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className=" pt-24 md:pt-64 pb-32 flex items-center relative">
+      <div className="pt-32 md:pt-64 pb-32 flex items-center relative">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -139,21 +139,24 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         ></div>
-        <div className=" ml-20 p-4 md:p-8 relative z-10 max-w-5xl">
+        <div className="ml-4 md:ml-20 p-4 md:p-8 relative z-10 max-w-5xl">
           <h3 className="font-medium text-white text-lg mb-4">
             Welcome To The WebCraft Solutions Limited
           </h3>
-          <h1 className="text-[37px] sm:text-[40px] md:text-[60px] lg:text-[70px] font-bold  text-white mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             Grow your business with our new bold agency
           </h1>
-          <p className=" text-white opacity-70 mb-8 text-lg">
+          <p className="text-white opacity-70 mb-8 text-base sm:text-lg">
             We understand the effect a great brand story can have with its
-            audience, but we also under stand the trust and affinity that can
+            audience, but we also understand the trust and affinity that can
             only come with great design. We never underestimate any parts of
             each project.
           </p>
-          <div class="text-box bg-blue-900">
-            <a href="#" class="btn btn-white btn-        animate">
+          <div className="">
+            <a
+              href="#"
+              className="btn btn-white btn-animate bg-blue-900 text-white py-1 px-3 md:py-2 md:px-4 rounded-lg"
+            >
               Contact Us
             </a>
           </div>
