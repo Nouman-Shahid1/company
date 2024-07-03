@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 // import Authentication from "../../components/Authentication";
-import Sidebar from "../../components/Sidebar/sidebar";
+// import Sidebar from "../../components/Sidebar/sidebar";
 import Favicon from "../../app/favicon.png";
 import Head from "next/head";
 
