@@ -15,6 +15,10 @@ const Navbar = () => {
     setDropdown(!dropdown);
   };
 
+  const closeDropdown = () => {
+    setDropdown(false);
+  };
+
   const links = [
     { id: 1, link: "Case Studies" },
     { id: 2, link: "Services" },
@@ -77,12 +81,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={` fixed top-0 w-full z-20 pt-2 h-24 transition-colors duration-300 ${
+      className={`fixed top-0 w-full z-20 pt-2 h-24 transition-colors duration-300 ${
         scroll ? "bg-black" : "bg-transparent"
       }`}
     >
       <div className="flex justify-between items-center w-[90%] mx-auto">
-        <div className="flex items-center">
+        {/* Desktop Navbar */}
+        <div className="hidden md:flex items-center w-full">
           <Link href="/">
             <div>
               <Image
@@ -92,59 +97,70 @@ const Navbar = () => {
               />
             </div>
           </Link>
-        </div>
-
-        <ul className="hidden md:flex space-x-6 h-full items-center">
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="relative px-4 cursor-pointer capitalize font-medium text-white hover:text-[#5c67f5] duration-200"
-            >
-              {link === "Services" ? (
-                <div className="flex items-center" onClick={toggleDropdown}>
-                  <span>{link}</span>
-                  <FaChevronDown className="ml-2 text-sm" />
-                </div>
-              ) : (
-                <Link href={`/${link.toLowerCase().replace(" ", "-")}`}>
-                  <span>{link}</span>
-                </Link>
-              )}
-              {link === "Services" && dropdown && (
-                <ul
-                  className="absolute left-0 top-full mt-2 border bg-white shadow-lg rounded-md w-80"
-                  ref={dropdownRef}
-                >
-                  {services.map(({ name, path }, index) => (
-                    <Link href={path} key={index}>
-                      <li className="px-4 py-2 text-gray-800 hover:text-[#5c67f5] hover:bg-gray-100 duration-200">
-                        <span>{name}</span>
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-
-        <div className="hidden md:flex items-center">
-          <Link href="/contact" className="">
+          <ul className="flex space-x-6 h-full items-center ml-auto">
+            {links.map(({ id, link }) => (
+              <li
+                key={id}
+                className="relative px-4 cursor-pointer capitalize font-medium text-white hover:text-[#5c67f5] duration-200"
+              >
+                {link === "Services" ? (
+                  <div className="flex items-center" onClick={toggleDropdown}>
+                    <span>{link}</span>
+                    <FaChevronDown className="ml-2 text-sm" />
+                  </div>
+                ) : (
+                  <Link href={`/${link.toLowerCase().replace(" ", "-")}`}>
+                    <span>{link}</span>
+                  </Link>
+                )}
+                {link === "Services" && dropdown && (
+                  <ul
+                    className="absolute left-0 top-full mt-2 border bg-white shadow-lg rounded-md w-80"
+                    ref={dropdownRef}
+                  >
+                    {services.map(({ name, path }, index) => (
+                      <Link href={path} key={index}>
+                        <li
+                          className="px-4 py-2 text-gray-800 hover:text-[#5c67f5] hover:bg-gray-100 duration-200"
+                          onClick={closeDropdown}
+                        >
+                          <span>{name}</span>
+                        </li>
+                      </Link>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+          <Link href="/contact" className="ml-4">
             <button className="bg-[#6168d1] text-white gap-5 h-full px-8 py-4 rounded-sm flex items-center justify-center text-lg font-semibold shadow hover:bg-blue-900 duration-200">
               <span>Start Project</span>
             </button>
           </Link>
         </div>
 
-        <div
-          onClick={() => setNav(!nav)}
-          className="cursor-pointer pr-4 z-10 text-gray-800 md:hidden"
-        >
-          {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {/* Mobile Navbar */}
+        <div className="flex md:hidden items-center w-full justify-between">
+          <Link href="/">
+            <div>
+              <Image
+                src={logo}
+                alt="WebCraft Logo"
+                className="h-20 w-auto cursor-pointer"
+              />
+            </div>
+          </Link>
+          <div
+            onClick={() => setNav(!nav)}
+            className="cursor-pointer pr-4 z-10 text-gray-800"
+          >
+            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+          </div>
         </div>
 
         {nav && (
-          <div className="fixed left-0 top-0 w-[320px] h-full bg-white flex flex-col justify-start items-start pt-2 pl-6 z-50">
+          <div className="fixed left-0 top-0 overflow-auto w-full h-full bg-black text-white flex flex-col justify-start items-start pt-2 pl-6 z-50 md:hidden">
             <div className="flex justify-between items-center w-full mb-6">
               <Link href="/">
                 <div>
@@ -167,7 +183,7 @@ const Navbar = () => {
                   {link === "Services" ? (
                     <div>
                       <div
-                        className="flex gap-20 items-center cursor-pointer capitalize font-medium text-gray-800 hover:text-[#5c67f5] duration-200"
+                        className="flex gap-20 items-center cursor-pointer capitalize font-medium text-white hover:text-[#5c67f5] duration-200"
                         onClick={toggleDropdown}
                       >
                         <span>{link}</span>
@@ -178,7 +194,11 @@ const Navbar = () => {
                           {services.map(({ name, path }, index) => (
                             <li
                               key={index}
-                              className="text-gray-800 hover:text-[#5c67f5] duration-200"
+                              className="text-white hover:text-[#5c67f5] duration-200"
+                              onClick={() => {
+                                closeDropdown();
+                                setNav(false);
+                              }}
                             >
                               <Link href={path}>
                                 <span>{name}</span>
@@ -189,10 +209,10 @@ const Navbar = () => {
                       )}
                     </div>
                   ) : (
-                    <div className="cursor-pointer capitalize font-medium text-gray-800 hover:text-[#5c67f5] duration-200">
+                    <div className="cursor-pointer capitalize font-medium text-white hover:text-[#5c67f5] duration-200">
                       <Link
                         href={`/${link.toLowerCase().replace(" ", "-")}`}
-                        onClick={() => setNav(!nav)}
+                        onClick={() => setNav(false)}
                       >
                         <span>{link}</span>
                       </Link>
