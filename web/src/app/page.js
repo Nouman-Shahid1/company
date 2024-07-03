@@ -173,7 +173,7 @@ export default function Home() {
           ))}
         </Marquee>
       </div>
-      <ServicesSection/>
+      <ServicesSection />
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-[32px] sm:text-[36px] md:text-[42px] font-extrabold text-gray-900 text-center">
@@ -348,11 +348,11 @@ export default function Home() {
 
       <section class="text-center py-16 bg-blue-400">
         <h2 class="text-3xl md:text-5xl font-bold text-white">
-          We've helped our clients complete +3,000 projects
+          Weve helped our clients complete +3,000 projects
         </h2>
         <p class="text-lg text-white mt-2">
-          Over the last 14 years, we've been driven by our passion for helping
-          global clients achieve their goals.
+          Over the last 14 years, we&apos;ve been driven by our passion for
+          helping global clients achieve their goals.
         </p>
 
         <div class="mt-16 grid grid-cols-1  md:grid-cols-3 lg:grid-cols-5 gap-6 px-4 md:px-40">
@@ -362,7 +362,7 @@ export default function Home() {
               The WebCraft Solutions Limited has stood out for their promptness
               and responsiveness.<br></br> <br></br> The client is extremely
               satisfied with their performance and technical skills. All in all,
-              they're a reliable and committed partner.<br></br>
+              they&apos;re a reliable and committed partner.<br></br>
               <br></br>
             </p>
             <p class="text-gray-100 font-semibold">
@@ -400,7 +400,7 @@ export default function Home() {
               Responsive and committed, The WebCraft Solutions Limited provides
               quality work in a timely manner. <br></br>
               <br></br>They also ensure that the developers they provide meet
-              the client's needs, leading to an ongoing partnership.
+              the client&apos;s needs, leading to an ongoing partnership.
             </p>
             <p class="text-gray-100 font-semibold">
               Eric Hurst, Co-Founder Intellirent

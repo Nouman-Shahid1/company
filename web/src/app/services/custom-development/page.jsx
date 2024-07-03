@@ -24,7 +24,7 @@ const benefits = [
   {
     title: "Tailored to Specific Needs",
     description:
-      "Custom software is designed to address your organization's unique requirements and challenges, ensuring a perfect fit for your operations.",
+      "Custom software is designed to address your organization&apos;s unique requirements and challenges, ensuring a perfect fit for your operations.",
   },
   {
     title: "Enhanced Efficiency",
@@ -49,7 +49,7 @@ const benefits = [
   {
     title: "Data Security",
     description:
-      "You have control over security measures, ensuring that sensitive data is protected according to your organization's standards and compliance requirements.",
+      "You have control over security measures, ensuring that sensitive data is protected according to your organization&apos;s standards and compliance requirements.",
   },
   {
     title: "Integration",

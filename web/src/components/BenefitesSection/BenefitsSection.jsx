@@ -253,7 +253,9 @@ const Benefits = () => {
               </div>
               <ul className="text-white space-y-2">
                 <li>Deploy Web Application To Live Environment.</li>
-                <li>Monitor Application's Performance & Address Issues.</li>
+                <li>
+                  Monitor Application&apos;s Performance & Address Issues.
+                </li>
                 <li>Provide Support, Maintenance & Updates As Needed.</li>
               </ul>
             </div>
