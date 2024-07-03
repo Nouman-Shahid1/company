@@ -126,7 +126,7 @@ const ServiceCard = ({ service, index }) => {
   return (
     <motion.div
       ref={ref}
-      className={`flex flex-col md:flex-row justify-between items-center w-full -mb-12`}
+      className={`flex flex-col md:flex-row justify-between items-center w-full mb-4 md:-mb-12`}
       initial="hidden"
       animate={controls}
       variants={{
