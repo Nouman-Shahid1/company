@@ -126,7 +126,7 @@ const ServiceCard = ({ service, index }) => {
   return (
     <motion.div
       ref={ref}
-      className={`flex flex-col md:flex-row justify-between items-center w-full mb-8`}
+      className={`flex flex-col md:flex-row justify-between items-center w-full -mb-12`}
       initial="hidden"
       animate={controls}
       variants={{
@@ -141,7 +141,7 @@ const ServiceCard = ({ service, index }) => {
         } w-full md:w-4/5 items-center mx-auto`}
       >
         <Link href={service.path} passHref className="w-full md:w-5/12">
-          <div className=" bg-[#191A20] hover:border border border-transparent hover:border-yellow-500 p-4 md:py-8 md:px-4 rounded-lg shadow-lg mb-4 md:mb-0">
+          <div className=" bg-[#191A20] hover:border border border-transparent hover:border-blue-500 p-4 md:py-8 md:px-4 rounded-lg shadow-lg mb-4 md:mb-0">
             <div className="md:hidden flex justify-center mb-2">
               <div
                 className={`h-10 w-10 rounded-full flex justify-center items-center ${getColor(

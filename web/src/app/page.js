@@ -177,43 +177,6 @@ export default function Home() {
         </Marquee>
       </div>
       <ServicesSection />
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-[32px] sm:text-[36px] md:text-[42px] font-extrabold text-gray-900 text-center">
-            From Idea to Completion, we bring Full-Stack Expertise
-          </h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="border-b-4 pb-6 hover:border-[#0b026f] transition-colors"
-              >
-                <Link href={service.path}>
-                  <div className="group">
-                    <div className="relative flex items-center p-6 bg-white rounded-lg hover:bg-[#FAFAFA] transition-colors group">
-                      <div className="mr-4">
-                        <img
-                          src={service.imgSrc}
-                          alt={service.imgAlt}
-                          className="w-[140px] md:w-[80px]"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#042638] group-hover:text-blue-900">
-                          {service.title}
-                        </h3>
-                        <p className="mt-2 text-[#7987a1] text-base sm:text-lg">
-                          {service.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <div className="bg-gradient-to-t from-blue-200 to-white py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
