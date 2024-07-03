@@ -6,12 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "preinstall": "npx npm-force-resolutions",
-    "postinstall": "npm install --legacy-peer-deps"
-  },
-  "resolutions": {
-    "redux": "5.0.1"
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
