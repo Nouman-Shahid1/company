@@ -3,30 +3,30 @@ import logo from "../../assets/images/logo.png";
 function Footer() {
   return (
     <>
-      <div className="  py-16 bg-gradient-to-t from-blue-300 to-white">
+      <div className="  py-16 bg-gradient-to-t from-black to-[#121417]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8">
           <div className="w-[92%]">
-            <h2 className="text-lg font-bold text-blue-900 mb-2">
+            <h2 className="text-lg font-bold text-blue-500 mb-2">
               Schedule a Call
             </h2>
-            <h3 className="text-4xl font-bold mb-4 text-[#042638]">
+            <h3 className="text-4xl font-bold mb-4 text-white">
               Book Your Free Consultation Call
             </h3>
-            <p className="mb-8 text-[#6d7a91] mt-8">
+            <p className="mb-8 text-[#8c97ab] mt-8">
               At The WebCraft Solutions Limited, we specialize in IT consulting,
               web development, mobile app development, custom software
               development, and digital transformation. Our team of seasoned
               experts is dedicated to helping businesses like yours thrive in
               the digital age.
             </p>
-            <p className="mb-8 text-[#606b7f]">
+            <p className="mb-8 text-[#8c97ab]">
               Schedule a free consultation call today and discover how our
               comprehensive services can elevate your business. Whether you need
               Shopify or WordPress solutions, cybersecurity measures, or
               AI-powered tools, we are here to support your goals and drive your
               success.
             </p>
-            <p className="mb-8 text-[#606b7f]">
+            <p className="mb-8 text-[#8c97ab]">
               Let us provide tailored strategies and innovative solutions to
               meet your unique business needs. Our commitment to quality and
               customer satisfaction ensures that you will receive the best
@@ -35,10 +35,10 @@ function Footer() {
           </div>
 
           <div>
-            <h2 className="text-lg font-bold text-blue-900 mb-2">
+            <h2 className="text-lg font-bold text-blue-500 mb-2">
               Get Started
             </h2>
-            <h3 className="text-4xl font-bold mb-4 text-[#042638]">
+            <h3 className="text-4xl font-bold mb-4 text-white">
               Schedule Your Free Call Now
             </h3>
             <div className="bg-white text-black rounded-lg shadow-lg">

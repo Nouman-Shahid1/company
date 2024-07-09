@@ -1,11 +1,11 @@
 "use client";
-import { Bona_Nova } from "@next/font/google";
+import { Inter } from "@next/font/google";
 // import dynamic from "next/dynamic";
 // import store from "../store/store";
 // import Head from "next/head";
 import "./globals.css";
 
-const bonaNova = Bona_Nova({ weight: "400", subsets: ["latin"] });
+const inter = Inter({ weight: "400", subsets: ["latin"] });
 
 // const DynamicProvider = dynamic(
 //   () => import("react-redux").then((mod) => mod.Provider),
@@ -15,9 +15,7 @@ const bonaNova = Bona_Nova({ weight: "400", subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={bonaNova.className}>
-       {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

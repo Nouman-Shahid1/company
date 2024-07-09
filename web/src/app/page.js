@@ -12,6 +12,7 @@ import Footer from "@/components/Footer/Footer";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
+import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 const clients = [
   { name: "Client 1", logo: client1 },
   { name: "Client 2", logo: client2 },
@@ -117,7 +118,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="pt-32 md:pt-64 pb-32 flex items-center relative">
+      <div className="pt-32 md:pt-64 pb-36 flex items-center relative">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -139,14 +140,14 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         ></div>
-        <div className="ml-4 md:ml-20 p-4 md:p-8 relative z-10 max-w-5xl">
-          <h3 className="font-medium text-white text-lg mb-4">
+        <div className="ml-0 md:ml-20 p-4 md:p-8 relative z-10 font-mono max-w-4xl mb-16">
+          <h3 className="font-medium text-white text-base md:text-lg mb-4">
             Welcome To The WebCraft Solutions Limited
           </h3>
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-4xl  sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-8">
             Grow your business with our new bold agency
           </h1>
-          <p className="text-white opacity-70 mb-8 text-base sm:text-lg">
+          <p className="text-white opacity-70 mb-10 leading-6 text-base sm:text-lg ">
             We understand the effect a great brand story can have with its
             audience, but we also understand the trust and affinity that can
             only come with great design. We never underestimate any parts of
@@ -177,18 +178,18 @@ export default function Home() {
         </Marquee>
       </div>
       <ServicesSection />
-
-      <div className="bg-gradient-to-t from-blue-200 to-white py-10">
+      <WhyChooseUs />
+      <div className="bg-[#121417] py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="max-w-[610px] px-4 sm:px-6">
-            <p className="text-blue-900 font-bold text-base md:text-lg">
+            <p className="text-blue-500 font-bold text-base md:text-lg">
               Pricing
             </p>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#042638]">
+            <h2 className="text-[32px] md:text-[40px] font-bold text-white">
               We leverage the{" "}
-              <span className="text-blue-900">latest advancements in AI</span>{" "}
+              <span className="text-blue-500">latest advancements in AI</span>{" "}
               to deliver the highest quality technology,{" "}
-              <span className="text-blue-900">on time and on budget</span>.
+              <span className="text-blue-500">on time and on budget</span>.
             </h2>
             <p className="mt-4 text-[#7987a1] text-sm md:text-base">
               We’ve been helping customers since 2024 and take pride in
@@ -196,13 +197,13 @@ export default function Home() {
               build, grow, and revolutionize your business.
             </p>
             <div className="flex mt-6">
-              <button className="border-2 border-[#042638] text-[#042638] py-2 px-4 md:py-4 md:px-8 rounded-full text-xs md:text-base lg:text-lg hover:text-white hover:bg-[#0b026f] hover:border-[#042638] whitespace-nowrap">
+              <button className="border-2 border-blue-500 text-white py-2 px-4 md:py-4 md:px-8 rounded-full text-xs md:text-base lg:text-lg hover:text-white hover:bg-[#0b026f] hover:border-[#042638] whitespace-nowrap">
                 See Our Reviews
               </button>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-6 sm:gap-8">
+            <div className="flex flex-wrap text-center justify-around mt-8 gap-6 sm:gap-8">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#042638]">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
                   236+
                 </h3>
                 <p className="text-[#7987a1] text-base md:text-lg">
@@ -210,7 +211,7 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#042638]">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
                   3,000+
                 </h3>
                 <p className="text-[#7987a1] text-base md:text-lg">
@@ -218,7 +219,7 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#042638]">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
                   23+
                 </h3>
                 <p className="text-[#7987a1] text-base md:text-lg">
@@ -312,7 +313,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section class="text-center py-16 bg-blue-400">
+      <section class="text-center py-16 bg-black">
         <h2 class="text-3xl md:text-5xl font-bold text-white">
           Weve helped our clients complete +3,000 projects
         </h2>
