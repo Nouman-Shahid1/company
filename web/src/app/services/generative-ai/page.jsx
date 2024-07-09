@@ -67,7 +67,7 @@ const page = () => {
         description="Harness the power of Generative AI to revolutionize your business processes and create innovative solutions."
         servicedescription={Description}
       />
-      <div className="container mx-auto py-6">
+      <div className="">
         {servicesData.map((data, index) => (
           <ServiceCard
             key={index}

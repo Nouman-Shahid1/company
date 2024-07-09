@@ -57,7 +57,7 @@ const page = () => {
         description="Unleashing the full potential of your business through expert guidance and strategic implementation of cutting-edge technologies."
         servicedescription={Description}
       />
-      <div className="container mx-auto py-6">
+      <div className="">
         {servicesData.map((data, index) => (
           <ServiceCard
             key={index}

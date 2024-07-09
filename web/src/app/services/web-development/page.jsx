@@ -73,7 +73,7 @@ const page = () => {
         description="Encompasses building and maintaining websites, including front-end (user interface) and back-end (server-side) development."
         servicedescription={Description}
       />
-      <div className="container mx-auto py-6">
+      <div className="">
         {servicesData.map((data, index) => (
           <ServiceCard
             key={index}

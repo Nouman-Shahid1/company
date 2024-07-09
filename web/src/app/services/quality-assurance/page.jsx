@@ -71,7 +71,7 @@ const page = () => {
         description="Involves a systematic process of evaluating software applications or systems to identify and fix issues."
         servicedescription={Description}
       />
-      <div className="container mx-auto py-6">
+      <div className="">
         {servicesData.map((data, index) => (
           <ServiceCard
             key={index}

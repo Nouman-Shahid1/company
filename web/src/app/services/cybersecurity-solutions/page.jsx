@@ -64,7 +64,7 @@ const page = () => {
         description="Safeguarding your invaluable digital assets and fortifying your online against the relentless and ever-evolving global landscape of cyber threats."
         servicedescription={Description}
       />
-      <div className="container mx-auto py-6">
+      <div className="">
         {servicesData.map((data, index) => (
           <ServiceCard
             key={index}

@@ -75,7 +75,7 @@ const Page = () => {
         description="With a diversified range of applications lying under Microsoft Dynamics 365, we provide result-oriented solutions to businesses in just 48 hours."
         servicedescription={Description}
       />
-      <div className="container mx-auto py-6">
+      <div className="">
         {servicesData.map((data, index) => (
           <ServiceCard
             key={index}

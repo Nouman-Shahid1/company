@@ -73,7 +73,7 @@ const page = () => {
         servicedescription={Description}
       />
 
-      <div className="container mx-auto py-6">
+      <div className="">
         {servicesData.map((data, index) => (
           <ServiceCard
             key={index}
