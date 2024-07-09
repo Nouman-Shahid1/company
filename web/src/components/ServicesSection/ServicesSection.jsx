@@ -146,7 +146,7 @@ const ServiceCard = ({ service, index }) => {
               <div
                 className={`h-10 w-10 rounded-full flex justify-center items-center ${getColor(
                   index
-                )} text-white`}
+                )} text-blue-500`}
               >
                 <span className="text-xl font-bold">
                   {(index + 1).toString().padStart(2, "0")}
