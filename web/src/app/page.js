@@ -23,97 +23,7 @@ const clients = [
   { name: "Client 7", logo: client7 },
   { name: "Client 8", logo: client8 },
 ];
-const services = [
-  {
-    title: "Web Development",
-    description:
-      "Deliver high-quality web development, design and functionality tailored for your business.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671de247c0baad125ec99be_Web%20Development.png",
-    imgAlt: "Web Development Icon",
-    path: "/services/web-development",
-  },
-  {
-    title: "Digital Transformation",
-    description:
-      "Digitize, automate and accelerate your business operations through digital transformation.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671de4472f466c6ec3a3300_Digital%20Transformation.png",
-    imgAlt: "Digital Transformation Icon",
-    path: "/services/digital-transformation",
-  },
-  {
-    title: "Generative AI",
-    description:
-      "Harness Generative AI and new technologies to innovate, automate, and stay ahead of the competition.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671ddfeb123a3a3d48768f6_Generative%20AI.png",
-    imgAlt: "Generative AI Icon",
-    path: "/services/generative-ai",
-  },
-  {
-    title: "Mobile App Development",
-    description:
-      "Make your mobile app stand out from the crowd with our Android and iOS development.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671de62c40da9ba7ef7af9d_Mobile%20App%20Development.png",
-    imgAlt: "Mobile App Development Icon",
-    path: "/services/mobile-app-development",
-  },
-  {
-    title: "Custom Development",
-    description:
-      "Get custom software perfectly built for your business to boost productivity and efficiency.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671de50483002553c942ae8_Custom%20Software%20Development.png",
-    imgAlt: "Custom Development Icon",
-    path: "/services/custom-development",
-  },
-  {
-    title: "Cybersecurity Solutions",
-    description:
-      "Keep your digital assets safe and protect your business from threats with our cybersecurity solutions.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671de6dbee6622cc090f605_Cybersecurity%20Solutions.png",
-    imgAlt: "Cybersecurity Solutions Icon",
-    path: "/services/cybersecurity-solutions",
-  },
-  {
-    title: "Microsoft Dynamics 365",
-    description:
-      "Implement and optimize Microsoft Dynamics 365 to streamline your business processes.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671de18d5df930e6fc05ff1_Microsoft%20Dynamics%20365.png",
-    imgAlt: "Microsoft Dynamics 365 Icon",
-    path: "/services/microsoft-dynamics-365",
-  },
-  {
-    title: "QA Testing & Automation",
-    description:
-      "Ensure your software meets the highest standards with our QA testing and automation services.",
-    imgSrc:
-      "https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/6671de30125b2c3c3ab89a13_QA%20Testing%20%26%20Automation.png",
-    imgAlt: "QA Testing & Automation Icon",
-    path: "/services/qa-testing-automation",
-  },
-  {
-    title: "Business Process Outsourcing",
-    description:
-      "Outsource your business processes to enhance efficiency and reduce costs with our BPO services.",
-    imgSrc: "https://img.icons8.com/?size=100&id=96323&format=png&color=25c9be",
-    imgAlt: "BPO Icon",
-    path: "/services/business-process-outsourcing",
-  },
-  {
-    title: "Cloud Services",
-    description:
-      "Leverage cloud computing to scale your operations and enhance flexibility with our cloud services.",
-    imgSrc:
-      "https://img.icons8.com/?size=100&id=32fUGrUStbEu&format=png&color=25c9be",
-    imgAlt: "Cloud Services Icon",
-    path: "/services/cloud-services",
-  },
-];
+
 export default function Home() {
   return (
     <div>
@@ -164,18 +74,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="overflow-hidden py-3 mt-16 max-w-7xl mx-auto">
-        <Marquee pauseOnHover="true">
-          {clients.map((client, index) => (
-            <div key={index} className="flex-shrink-0 px-4">
-              <img
-                src={client.logo.src}
-                alt={client.name}
-                className="h-16 mx-auto"
-              />
-            </div>
-          ))}
-        </Marquee>
+      <div className="bg-black">
+        <div className="overflow-hidden py-20 max-w-7xl mx-auto">
+          <Marquee pauseOnHover="true">
+            {clients.map((client, index) => (
+              <div key={index} className="flex-shrink-0 px-4">
+                <div className="">
+                  <img
+                    src={client.logo.src}
+                    alt={client.name}
+                    className="h-16 mx-auto filter grayscale-0"
+                  />
+                </div>
+              </div>
+            ))}
+          </Marquee>
+        </div>
       </div>
       <ServicesSection />
       <WhyChooseUs />

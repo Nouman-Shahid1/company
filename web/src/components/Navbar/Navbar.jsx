@@ -86,7 +86,6 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-between items-center w-[90%] mx-auto">
-        {/* Desktop Navbar */}
         <div className="hidden md:flex items-center w-full">
           <Link href="/">
             <div>
@@ -97,7 +96,7 @@ const Navbar = () => {
               />
             </div>
           </Link>
-          <ul className="flex space-x-6 h-full items-center ml-auto">
+          <ul className="flex space-x-6 h-full items-center mx-auto">
             {links.map(({ id, link }) => (
               <li
                 key={id}
