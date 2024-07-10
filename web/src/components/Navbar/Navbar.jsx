@@ -81,7 +81,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 w-full z-20 pt-2 h-24 transition-colors duration-300 ${
+      className={`fixed top-0  w-full z-20 pt-2 h-24 transition-colors duration-300 ${
         scroll ? "bg-black" : "bg-transparent"
       }`}
     >
@@ -114,13 +114,13 @@ const Navbar = () => {
                 )}
                 {link === "Services" && dropdown && (
                   <ul
-                    className="absolute left-0 top-full mt-2 border bg-white shadow-lg rounded-md w-80"
+                    className="absolute left-0 top-full mt-2 bg-black text-white shadow-lg rounded-md w-72"
                     ref={dropdownRef}
                   >
                     {services.map(({ name, path }, index) => (
                       <Link href={path} key={index}>
                         <li
-                          className="px-4 py-2 text-gray-800 hover:text-[#5c67f5] hover:bg-gray-100 duration-200"
+                          className="px-4 py-2 text-white hover:text-[#5c67f5] hover:bg-gray-300 duration-200"
                           onClick={closeDropdown}
                         >
                           <span>{name}</span>
