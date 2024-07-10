@@ -83,7 +83,7 @@ export default function Home() {
                   <img
                     src={client.logo.src}
                     alt={client.name}
-                    className="h-16 mx-auto filter grayscale-0"
+                    className="h-16 mx-auto filter grayscale"
                   />
                 </div>
               </div>
