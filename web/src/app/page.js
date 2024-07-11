@@ -232,7 +232,7 @@ export default function Home() {
           Weve helped our clients complete +3,000 projects
         </h2>
         <p class="text-lg text-white mt-2">
-          Over the last 14 years, we&apos;ve been driven by our passion for
+          Over the last 1 years, we&apos;ve been driven by our passion for
           helping global clients achieve their goals.
         </p>
 
