@@ -120,7 +120,7 @@ const Navbar = () => {
                     {services.map(({ name, path }, index) => (
                       <Link href={path} key={index}>
                         <li
-                          className="px-4 py-2 text-white hover:text-[#5c67f5] hover:bg-gray-300 duration-200"
+                          className="px-4 py-2 text-white hover:text-[#5c67f5] hover:bg-[#181c1f] duration-200"
                           onClick={closeDropdown}
                         >
                           <span>{name}</span>
