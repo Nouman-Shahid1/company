@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import logo from "../../assets/images/logobg.png";
 function Footer() {
   return (
@@ -248,60 +249,45 @@ function Footer() {
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/about"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         About
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/reviews"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Reviews
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/careers"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Careers
-                      </a>
+                      </Link>
                     </li>
+
                     <li>
-                      <a
-                        href="#"
-                        className="text-sm leading-6 text-gray-400 hover:text-white"
-                      >
-                        Referrals
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="text-sm leading-6 text-gray-400 hover:text-white"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/contact"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Contact Us
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -311,84 +297,84 @@ function Footer() {
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/web-development"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Web Development
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/mobile-app-development"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Mobile App Development
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/generative-ai"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Generative AI
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/services/custom-development"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Custom Development
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/microsoft-dynamics-365-business-solutions"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Microsoft Dynamics 365
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/cybersecurity-solutions"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Cybersecurity Solutions
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/quality-assurance"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         QA Testing
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/digital-transformation"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Digital Transformation
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/cloud-services"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Cloud Services
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/services/business-process-outsourcing"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
-                        IT Consulting
-                      </a>
+                        BPO
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -400,45 +386,22 @@ function Footer() {
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/case-studies"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Case Studies
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/learning"
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Learning
-                      </a>
+                      </Link>
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="text-sm leading-6 text-gray-400 hover:text-white"
-                      >
-                        Security
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="text-sm leading-6 text-gray-400 hover:text-white"
-                      >
-                        FAQ
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="text-sm leading-6 text-gray-400 hover:text-white"
-                      >
-                        Partners
-                      </a>
-                    </li>
+
                     <li>
                       <a
                         href="#"
@@ -453,14 +416,6 @@ function Footer() {
                         className="text-sm leading-6 text-gray-400 hover:text-white"
                       >
                         Terms of Service
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="text-sm leading-6 text-gray-400 hover:text-white"
-                      >
-                        Sitemap
                       </a>
                     </li>
                   </ul>
