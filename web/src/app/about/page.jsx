@@ -2,11 +2,49 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
-import { Briefcase, Globe, Handshake, Rocket, TrendingUp, CheckCircle } from "lucide-react";  // If using Lucide
-// import DevelopmentProcess from "@/components/Development Process/Developmentprocess";
-import dynamic from "next/dynamic"; 
+import { Briefcase, Globe, Handshake, Rocket, TrendingUp, CheckCircle } from "lucide-react"; 
+import Link from "next/link";
+
+
 export default function AboutPage() {
-  const DevelopmentProcess = dynamic(() => import("@/components/Development Process/Developmentprocess"), { ssr: false, }); 
+  const services = [
+    { 
+      name: "Custom Software Development", 
+      path: "/services/custom-development", 
+      icon: <Briefcase className="w-14 h-14 text-blue-500 mx-auto" />,
+      description: "Tailored software solutions built to fit your business processes and needs, ensuring scalability and performance.",
+    },
+    { 
+      name: "Web & Mobile App Development", 
+      path: "/services/web-development", 
+      icon: <Globe className="w-14 h-14 text-blue-500 mx-auto" />,
+      description: "Modern, responsive web and mobile applications designed to enhance user experience and business efficiency.",
+    },
+    { 
+      name: "Digital Marketing & SEO", 
+      path: "/services/digital-transformation", 
+      icon: <TrendingUp className="w-14 h-14 text-blue-500 mx-auto" />,
+      description: "Data-driven marketing strategies and SEO services to improve your online presence and visibility.",
+    },
+    { 
+      name: "IT Consulting & Strategy", 
+      path: "/services/microsoft-dynamics-365-business-solutions", 
+      icon: <Handshake className="w-14 h-14 text-blue-500 mx-auto" />,
+      description: "Expert consulting services to align your IT infrastructure with your long-term business objectives.",
+    },
+    { 
+      name: "Cloud Solutions & DevOps", 
+      path: "/services/cloud-services", 
+      icon: <CheckCircle className="w-14 h-14 text-blue-500 mx-auto" />,
+      description: "Cloud migrations, architecture optimization, and DevOps automation to streamline your operations.",
+    },
+    { 
+      name: "Blockchain & AI Solutions", 
+      path: "/services/generative-ai", 
+      icon: <Rocket className="w-14 h-14 text-blue-500 mx-auto" />,
+      description: "Cutting-edge blockchain and AI services to bring innovation and automation to your business processes.",
+    },
+  ];
   return (
     <div className="bg-black text-white font-sans">
       <Navbar />
@@ -114,59 +152,36 @@ export default function AboutPage() {
 </section>
 
 
-<section className="py-20 bg-[#121417] px-6 md:px-16">
-  <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-5xl font-extrabold text-white">Our Services</h2>
-    <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
-      Explore the wide range of technology solutions and services offered by The WebCraft Solutions Limited to fuel your business growth.
-    </p>
-  </div>
 
-  {/* Services Grid */}
-  <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    {[
-      {
-        icon: <Briefcase className="w-14 h-14 text-blue-500 mx-auto" />,
-        title: "Custom Software Development",
-        description: "Tailored software solutions built to fit your business processes and needs, ensuring scalability and performance.",
-      },
-      {
-        icon: <Globe className="w-14 h-14 text-blue-500 mx-auto" />,
-        title: "Web & Mobile App Development",
-        description: "Modern, responsive web and mobile applications designed to enhance user experience and business efficiency.",
-      },
-      {
-        icon: <TrendingUp className="w-14 h-14 text-blue-500 mx-auto" />,
-        title: "Digital Marketing & SEO",
-        description: "Data-driven marketing strategies and SEO services to improve your online presence and visibility.",
-      },
-      {
-        icon: <Handshake className="w-14 h-14 text-blue-500 mx-auto" />,
-        title: "IT Consulting & Strategy",
-        description: "Expert consulting services to align your IT infrastructure with your long-term business objectives.",
-      },
-      {
-        icon: <CheckCircle className="w-14 h-14 text-blue-500 mx-auto" />,
-        title: "Cloud Solutions & DevOps",
-        description: "Cloud migrations, architecture optimization, and DevOps automation to streamline your operations.",
-      },
-      {
-        icon: <Rocket className="w-14 h-14 text-blue-500 mx-auto" />,
-        title: "Blockchain & AI Solutions",
-        description: "Cutting-edge blockchain and AI services to bring innovation and automation to your business processes.",
-      },
-    ].map((service, index) => (
-      <div
-        key={index}
-        className="p-8 bg-[#1a1d23] border border-gray-800 rounded-2xl text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-1"
-      >
-        <div className="mb-4">{service.icon}</div>
-        <h4 className="text-2xl font-bold text-white">{service.title}</h4>
-        <p className="mt-3 text-gray-400">{service.description}</p>
+
+    <section className="py-20 bg-[#121417] px-6 md:px-16">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-5xl font-extrabold text-white">Our Services</h2>
+        <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
+          Explore the wide range of technology solutions and services offered by The WebCraft Solutions Limited to fuel your business growth.
+        </p>
       </div>
-    ))}
-  </div>
-</section>
+
+      {/* Services Grid */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  {services.map((service, index) => (
+    <Link href={service.path} key={index} className="group">
+      <div className="p-8 bg-[#1a1d23] border border-gray-800 rounded-2xl text-center hover:shadow-2xl transition duration-500 transform group-hover:-translate-y-1 cursor-pointer flex flex-col h-full">
+        {/* Icon */}
+        <div className="mb-4">{service.icon}</div>
+        
+        {/* Title */}
+        <h4 className="text-2xl font-bold text-white">{service.name}</h4>
+        
+        {/* Description - Use flex-grow to push all cards to equal height */}
+        <p className="mt-3 text-gray-400 flex-grow">{service.description}</p>
+      </div>
+    </Link>
+  ))}
+</div>
+
+    </section>
+
 
 
 
